@@ -37,6 +37,17 @@ const upload = multer({
 // Check File type
 function checkFileType(file, cb) {
     // Allowed ext
+    const filetypes = /jpeg|jpg|png|gif/;
+    // check ext
+    const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    //check mime
+    const mimetype = filetypes.test(file.mimetype);
+
+    if(mimetype && extname){
+        return cb(null, true);
+    } else {
+        cb('Error images only!');
+    }
 }
 
 //Init app
