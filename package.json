@@ -1,0 +1,16 @@
+{
+  "name": "image-flie-uploader",
+  "version": "1.0.0",
+  "description": "Images and files uploader",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Pranav Kalra",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "multer": "^1.4.1"
+  }
+}

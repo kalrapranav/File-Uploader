@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- CSS File-->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Client Side</title>
+   
+</head>
+<body>
+    <h1>Client Side</h1>
+    <p>The following part of the Driller is a Client Side Interface</p>
+    <p>There the user will get an option to upload Files</p>
+
+    <h4>The use can choose one of the following file types to upload</h4>
+    <ul>
+        <li>Binary Files</li>
+        <li>Docker Files</li>
+        <li>Text Files</li>
+        <li>Json Files</li>
+    </ul>
+        <input type="file" id="input-btn" hidden="hidden"/>
+        <button type="button" id="file-btn" class="btn btn-success">CHOOSE A FILE</button>
+        <span id="custom-text">NO FILE SELECTED</span>
+    
+    
+    <script>
+        const inputBtn = document.getElementById("input-btn");
+        const fileBtn = document.getElementById("file-btn"); 
+        const customText = document.getElementById("custom-text");
+
+        fileBtn.addEventListener("click", function() {
+            inputBtn.click();
+        });
+
+        inputBtn.addEventListener("change", function() {
+            console.log("change occured");
+            var x = inputBtn.value;
+            console.log(x);
+        });
+
+
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
